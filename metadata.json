@@ -1,0 +1,5 @@
+{
+  "name": "iNovaForge",
+  "description": "A production-ready, v0.dev-style dashboard for monitoring live deployment metrics with glassmorphism UI, skeleton loaders, and toast notifications for alerts.",
+  "requestFramePermissions": []
+}

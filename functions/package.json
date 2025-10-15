@@ -1,0 +1,27 @@
+{
+  "name": "innovaforge-functions",
+  "version": "1.0.0",
+  "description": "Backend functions for InnovaForge",
+  "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "@google/genai": "^1.24.0",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.5.0",
+    "resend": "^3.4.0",
+    "stripe": "^14.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

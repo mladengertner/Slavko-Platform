@@ -1,0 +1,85 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/ideas/generate",
+        "function": "generateIdea"
+      },
+      {
+        "source": "/api/builds/start",
+        "function": "startBuild"
+      },
+      {
+        "source": "/api/checkout",
+        "function": "createCheckoutSession"
+      },
+      {
+        "source": "/api/check-limits",
+        "function": "checkLimits"
+      },
+      {
+        "source": "/api/webhooks/stripe",
+        "function": "stripeWebhook"
+      },
+      {
+        "source": "/api/admin/stats",
+        "function": "adminGetStats"
+      },
+      {
+        "source": "/api/admin/users",
+        "function": "adminGetUsers"
+      },
+      {
+        "source": "/api/admin/users/suspend",
+        "function": "adminSuspendUser"
+      },
+      {
+        "source": "/api/admin/costs/vercel",
+        "function": "adminGetVercelCosts"
+      },
+      {
+        "source": "/api/admin/costs/kv",
+        "function": "adminGetKVCosts"
+      },
+      {
+        "source": "/api/admin/costs/gemini",
+        "function": "adminGetGeminiCosts"
+      },
+      {
+        "source": "/api/rewards/social-share",
+        "function": "socialShareReward"
+      },
+      {
+        "source": "/api/leaderboard",
+        "function": "getLeaderboard"
+      },
+      {
+        "source": "/api/deployments/global",
+        "function": "getGlobalDeployments"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "runtime": "nodejs18"
+    }
+  ]
+}
